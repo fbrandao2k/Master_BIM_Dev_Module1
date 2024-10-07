@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <aside id="sidebar">
+    <img id="company-logo" src="./assets/company-logo.svg" alt="Construction Company">
+    <ul id="nav-buttons">
+      <li><span class="material-icons-round">apartment</span>Projects</li>
+      <li><span class="material-icons-round">people</span>Users</li>
+    </ul>
+  </aside>
+
+    <div class="page" id="users-page" display="flex" >
+
+    <dialog id="new-user-modal">
+      <form>
+        <h2>New User</h2>
+        <div class="input-list">
+          <div class="form-field-container">
+            <label><span class="material-icons-round">badge</span>Name</label>
+            <input
+                name="name"
+                type="text"
+                placeholder="What is your name?"
+              />
+              <p style="color: gray; font-size: var(--font-sm); margin-top: 5px; font-style: italic;">TIP: Give it a complete name</p>
+          </div>
+          <div class="form-field-container">
+            <label><span class="material-icons-round">subject</span>Description</label>
+            <textarea
+                name="description"
+                cols={30}
+                rows={5}
+                placeholder="Give a description for this user."
+                defaultValue="">
+            </textarea>
+          </div>
+          <div class="form-field-container">
+            <label><span class="material-icons-round">mail</span>Email</label>
+            <input
+                name="email"
+                type="text"
+                placeholder="What is your email?"
+            />
+            <p
+            style="color: gray; font-size: var(--font-sm); margin-top: 5px; font-style: italic;">
+            TIP: Give it a complete email
+            </p>
+        </div>
+        <div className="form-field-container">
+            <label>
+              <span className="material-icons-round">person</span>Role
+            </label>
+            <select name="userRole">
+              <option>Architect</option>
+              <option>Engineer</option>
+              <option>Developer</option>
+            </select>
+          </div>
+          <div
+              style="
+                display: flex;
+                margin: 10px 0px 10px auto;
+                column-gap: 10px;"
+            >
+            <button style="background-color: transparent;">Cancel</button>
+            <button style="background-color: rgb(18, 145, 18);">Accept</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <header>
+      <h2>Users</h2>
+
+      <div style=" display: flex; align-items: center; column-gap: 10px; width: 40%;">
+        <input
+          type="text"
+          placeholder="Search by a name"
+          style="width: 100%; height: 40px; background-color: var(--background-100) "
+        />
+      </div>
+
+
+      <div id="search_bar" style=" display: flex; align-items: center; column-gap: 15px;"></div>
+      <div style=" display: flex; align-items: center; column-gap: 15px;"></div>
+      
+        <button><span class="material-icons-round">add</span>New User</button>
+
+    </header>
+
+
+    <table class="user-table">
+
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>User Since</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+            <tr style="cursor: pointer;">
+                <td>
+                <p
+                    style="
+                      background-color: backgroundColor;
+                      padding: 5px;
+                      border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 16px;
+                      color: white;
+                      margin: 0px auto;"
+                  >
+                    Fe
+                  </p>
+                </td>
+                <td>Felipe da Silva Brandao</td>
+                <td>fbrandao2k@gmail.com</td>
+                <td>Engineer</td>
+                <td>30/09/2024</td>        
+              </tr>
+
+              <tr style="cursor: pointer;"></tr>
+                <td>
+                <p
+                    style="
+                      background-color: backgroundColor;
+                      padding: 5px;
+                      border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 16px;
+                      color: white;
+                      margin: 0 auto;"
+                  >
+                    U2
+                  </p>
+                </td>
+                <td>User 2</td>
+                <td>user2@gmail.com</td>
+                <td>Architect</td>
+                <td>28/09/2024</td>        
+              </tr>
+
+              <tr style="cursor: pointer;"></tr>
+                <td>
+                <p
+                    style="
+                      background-color: backgroundColor;
+                      padding: 5px;
+                      border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 16px;
+                      color: white;
+                      margin: 0 auto;"
+                  >
+                    U3
+                  </p>
+                </td>
+                <td>User 3</td>
+                <td>user3@gmail.com</td>
+                <td>Developer</td>
+                <td>26/09/2024</td>        
+              </tr>
+
+        </tbody>
+    </table>  
+    </div>    
